@@ -50,15 +50,24 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'Enter your email address?'
-      }
-    
+      },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    err ? console.log(err) : console.log('Succesfully created README.md')
+  });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions)
+  .then((answers) => {
+    const readmeContent = generateMarkdown(answers);
+    writeToFile('README.md', readmeContent);
+  })
+}
 
 // Function call to initialize app
 init();
