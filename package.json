@@ -1,0 +1,25 @@
+{
+  "name": "readme-creator",
+  "version": "1.0.0",
+  "description": "A command-line tool that dynamically generates README.md files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-2mm/readme-creator.git"
+  },
+  "keywords": [
+    "readme"
+  ],
+  "author": "Carlos Macias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlos-2mm/readme-creator/issues"
+  },
+  "homepage": "https://github.com/carlos-2mm/readme-creator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
