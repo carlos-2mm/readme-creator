@@ -4,6 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./assets/generateMarkdown')
 
 // TODO: Create an array of questions for user input
+console.log('You need to answer a number of questions in order to generate a professional README.md file.')
 const questions = [
     {
         type: 'input',
@@ -11,29 +12,34 @@ const questions = [
         message: 'What is the project title?',
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'description',
         message: 'Give a description of your project:'
       },
       {
-        type: 'input',
+        type: 'editor',
         name: 'installation',
-        message: 'How do users install your project?'
+        message: 'Enter a valid installation instructions for your project:'
       },
       {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
-        message: 'How do users use your project once it is installed?'
+        message: 'Provide instructions and examples for use. If necessary, include screenshots:'
       },
       {
         type: 'input',
         name: 'contribution',
-        message: 'How can others contribute to your project?'
+        message: 'Enter a contribution guidelines for your project:'
       },
       {
-        type: 'input',
+        type: 'editor',
+        name: 'credits',
+        message: 'Enter your collaborators, used technologies, and third-party assets, if any, to your project:',
+      },
+      {
+        type: 'editor',
         name: 'test',
-        message: 'How can users test your project?'
+        message: 'Enter the test instructions for your project:'
       },
       {
         type: 'list',
@@ -44,12 +50,12 @@ const questions = [
       {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub username?'
+        message: 'Enter your GitHub username:'
       },
       {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address?'
+        message: 'Enter your email address:'
       },
 ];
 
@@ -67,6 +73,9 @@ function init() {
     const readmeContent = generateMarkdown(answers);
     writeToFile('README.md', readmeContent);
   })
+  .catch(err => {
+    console.error('An error occurred during the prompt:', err);
+  });
 }
 
 // Function call to initialize app
