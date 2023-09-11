@@ -55,15 +55,15 @@ Contributions, problems, and suggestions for features are encouraged! Please con
 ---
 
 ## Credits
-Inquirer is utilized to prompt users for input.
-https://www.npmjs.com/package/inquirer/v/8.2.4
+
+https://www.npmjs.com/package/inquirer/v/8.2.4  
 Serves as the resource for Inquirer documentation.
 
 
-https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide  
 Serves as the resource for the Professional ReadMe guide.
 
-https://github.com/coding-boot-camp/potential-enigma
+https://github.com/coding-boot-camp/potential-enigma  
 This is the website to the original repository.
 
 
